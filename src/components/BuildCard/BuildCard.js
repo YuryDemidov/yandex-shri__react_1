@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { IconWithTitle } from '../IconWithTItle/IconWithTitle';
 import { SvgIcon } from '../Svg/SvgIcon';
 import '../../css/components/build-card.css';
@@ -61,4 +62,19 @@ export const BuildCard = ({ buildData: build }) => {
     : <Link className='build-card' to={buildUrl}>
         {buildCardContent}
       </Link>
+}
+
+BuildCard.propTypes = {
+  buildData: PropTypes.exact({
+    id: PropTypes.string,
+    configurationId: PropTypes.string,
+    buildNumber: PropTypes.number,
+    commitMessage: PropTypes.string,
+    commitHash: PropTypes.string,
+    branchName: PropTypes.string,
+    authorName: PropTypes.string,
+    status: PropTypes.oneOf(['Waiting', 'InProgress', 'Success', 'Fail', 'Canceled']),
+    start: PropTypes.string,
+    duration: PropTypes.number
+  })
 }

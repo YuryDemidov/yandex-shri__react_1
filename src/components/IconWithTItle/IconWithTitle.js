@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import '../../css/components/icon-with-title.css';
 
 export const IconWithTitle = ({ icon, title, additionalTitle, titleClass, ariaHidden }) => {
@@ -17,3 +18,11 @@ export const IconWithTitle = ({ icon, title, additionalTitle, titleClass, ariaHi
     </span>
   )
 }
+
+IconWithTitle.propTypes = {
+  icon: PropTypes.element.isRequired,
+  title: PropTypes.string.isRequired,
+  additionalTitle: PropTypes.string,
+  titleClass: PropTypes.string,
+  ariaHidden: PropTypes.bool
+};

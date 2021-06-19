@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { BuildCard } from '../BuildCard/BuildCard';
-import { mockBuilds } from '../../mockData';
+import { mockBuilds } from '../../js/mockData';
 import '../../css/components/build-logs.css';
 
 const logOutput =

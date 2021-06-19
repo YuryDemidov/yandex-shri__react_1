@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { BuildCard } from '../BuildCard/BuildCard';
 import { Button } from '../Button/Button';
 import '../../css/components/builds-list.css';
-import { mockBuilds } from '../../mockData';
+import { mockBuilds } from '../../js/mockData';
 
 export const BuildsListContent = () => {
   const [builds, setBuilds] = useState(mockBuilds.data);

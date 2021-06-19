@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import '../../css/components/page-header.css'
 
 export const PageHeader = ({renderHeaderLeft, renderHeaderRight}) => {
@@ -16,3 +17,8 @@ export const PageHeader = ({renderHeaderLeft, renderHeaderRight}) => {
     </header>
   )
 }
+
+PageHeader.propTypes = {
+  renderHeaderLeft: PropTypes.func.isRequired,
+  renderHeaderRight: PropTypes.func.isRequired
+};

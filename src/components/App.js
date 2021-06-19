@@ -6,7 +6,7 @@ import { BuildsListPage } from './BuildsListPage/BuildsListPage';
 import { StartScreenPage } from './StartScreenPage/StartScreenPage';
 import { SettingsPage } from './SettingsPage/SettingsPage';
 import { BuildLogsPage } from './BuildLogsPage/BuildLogsPage';
-import { mockConfig } from '../mockData';
+import { mockConfig } from '../js/mockData';
 import { NewBuildModal } from './NewBuildModal/NewBuildModal';
 
 export const AppContext = createContext(mockConfig);

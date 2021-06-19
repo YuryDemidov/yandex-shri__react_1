@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import '../../css/components/button.css';
 
 export const Button = ({ content, modifiers = [], type = 'button', disabled, ariaLabel, clickHandler }) => {
@@ -10,3 +11,15 @@ export const Button = ({ content, modifiers = [], type = 'button', disabled, ari
     </button>
   )
 }
+
+Button.propTypes = {
+  content: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element
+  ]).isRequired,
+  modifiers: PropTypes.arrayOf(PropTypes.string),
+  type: PropTypes.oneOf(['submit', 'button']),
+  disabled: PropTypes.bool,
+  ariaLabel: PropTypes.string,
+  clickHandler: PropTypes.func
+};

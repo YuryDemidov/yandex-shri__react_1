@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Button } from '../Button/Button';
 import { TextInput } from '../TextInput/TextInput';
 import '../../css/components/modal-wrap.css';
@@ -54,3 +55,8 @@ export const NewBuildModal = ({ show, setShow }) => {
       </div>
     : null;
 }
+
+NewBuildModal.propTypes = {
+  show: PropTypes.bool.isRequired,
+  setShow: PropTypes.func.isRequired
+};

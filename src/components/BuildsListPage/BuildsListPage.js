@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import PropTypes from 'prop-types';
 import { AppContext } from '../App';
 import { PageHeader } from '../Page/PageHeader';
 import { PageContent } from '../Page/PageContent';
@@ -23,3 +24,7 @@ export const BuildsListPage = ({ showBuildModal }) => {
     </>
   )
 }
+
+BuildsListPage.propTypes = {
+  showBuildModal: PropTypes.func.isRequired
+};

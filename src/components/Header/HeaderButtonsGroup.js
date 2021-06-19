@@ -1,7 +1,8 @@
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { Button } from '../Button/Button';
 import { IconWithTitle } from '../IconWithTItle/IconWithTitle';
 import { SvgIcon } from '../Svg/SvgIcon';
-import { Link } from 'react-router-dom';
 
 export const HeaderButtonsGroup = ({ buttonsSet, showBuildModal }) => {
   return (
@@ -47,3 +48,8 @@ export const HeaderButtonsGroup = ({ buttonsSet, showBuildModal }) => {
     </div>
   )
 }
+
+HeaderButtonsGroup.propTypes = {
+  buttonsSet: PropTypes.arrayOf(PropTypes.string),
+  showBuildModal: PropTypes.func
+};

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const PageContent = ({ renderPageContent }) => {
   return (
     <main className='page__content page-content'>
@@ -7,3 +9,7 @@ export const PageContent = ({ renderPageContent }) => {
     </main>
   )
 }
+
+PageContent.propTypes = {
+  renderPageContent: PropTypes.func.isRequired
+};

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Button } from '../Button/Button';
 import { SvgIcon } from '../Svg/SvgIcon';
 import '../../css/components/text-input.css';
@@ -48,4 +49,17 @@ export const TextInput = ({
       {labelTextAfter && <label className='text-input__label' htmlFor={id}>{labelTextAfter}</label>}
     </div>
   )
+}
+
+TextInput.propTypes = {
+  id: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  initialValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  type: PropTypes.string,
+  labelTextBefore: PropTypes.string.isRequired,
+  labelTextAfter: PropTypes.string,
+  placeholder: PropTypes.string,
+  isRequired: PropTypes.bool,
+  hasClearButton: PropTypes.bool
 }

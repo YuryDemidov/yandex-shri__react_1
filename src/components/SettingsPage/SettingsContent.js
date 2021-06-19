@@ -3,21 +3,11 @@ import { Link } from 'react-router-dom';
 import { AppContext } from '../App';
 import { Button } from '../Button/Button';
 import { TextInput } from '../TextInput/TextInput';
+import { MESSAGES } from '../../js/utils/messages';
+import { REGEXPS } from '../../js/utils/regexps';
 import '../../css/components/settings.css';
 
 export const SettingsContent = () => {
-  const MESSAGES = {
-    ERRORS: {
-      required: 'Please, fill in all required fields',
-      nonNumber: 'Period must contain only numeric symbols'
-    },
-    SUCCESS: {
-      send: 'Data was successfully validated and should be processed. Output in console'
-    }
-  };
-  const REGEXPS = {
-    nonNumber: /\D/
-  }
   const { repoName, buildCommand, mainBranch, period } = useContext(AppContext);
 
   const [message, setMessage] = useState({
@@ -35,7 +25,7 @@ export const SettingsContent = () => {
     for (let [key, value] of formData) {
       if ((key === 'repoName' || key === 'buildCommand') && !value.trim()) {
         setMessage({
-          text: MESSAGES.ERRORS.required,
+          text: MESSAGES.ERROR.required,
           type: 'error'
         });
         setErrorInputs(state => [...state, key]);
@@ -44,7 +34,7 @@ export const SettingsContent = () => {
 
       if (key === 'period' && REGEXPS.nonNumber.test(value)) {
         setMessage({
-          text: MESSAGES.ERRORS.nonNumber,
+          text: MESSAGES.ERROR.nonNumberPeriod,
           type: 'error'
         });
         setErrorInputs(state => [...state, key]);

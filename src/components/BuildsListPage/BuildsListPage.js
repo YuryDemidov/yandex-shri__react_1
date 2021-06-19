@@ -6,18 +6,19 @@ import { HeaderTitle } from '../Header/HeaderTitle';
 import { HeaderButtonsGroup} from '../Header/HeaderButtonsGroup';
 import { BuildsListContent } from './BuildsListContent';
 
-export const BuildsListPage = () => {
+export const BuildsListPage = ({ showBuildModal }) => {
   const { repoName } = useContext(AppContext);
 
   return (
     <>
       <PageHeader
         renderHeaderLeft={() => <HeaderTitle text={repoName}/>}
-        renderHeaderRight={() => <HeaderButtonsGroup buttonsSet={['build', 'settings']}/>}
+        renderHeaderRight={() =>
+          <HeaderButtonsGroup buttonsSet={['build', 'settings']} showBuildModal={showBuildModal}/>
+        }
       />
       <PageContent
         renderPageContent={() => <BuildsListContent/>}
-        hasContainer
       />
     </>
   )

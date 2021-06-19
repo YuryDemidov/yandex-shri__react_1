@@ -14,7 +14,7 @@
   margin: 0;
 
   font-weight: 500;
-  font-size: 1.8rem;
+  font-size: var(--font-size-xl);
   letter-spacing: 0.025rem;
 }
 
@@ -36,13 +36,17 @@
   }
 
   .page-header__title {
-    font-size: 2.2rem;
+    font-size: var(--font-size-xl);
+  }
+
+  .page-header__right {
+    margin-top: 0.2rem;
   }
 }
 
 @media (min-width: 1024px) {
   .page-header__title {
-    font-size: 2.4rem;
+    font-size: var(--font-size-xxl);
     line-height: 1.2;
   }
 }

@@ -11,10 +11,7 @@ export const SettingsPage = () => {
         renderHeaderRight={() => null}
       />
       <PageContent
-        renderPageContent={
-          () => <SettingsContent/>
-        }
-        hasContainer
+        renderPageContent={() => <SettingsContent/>}
       />
     </>
   )

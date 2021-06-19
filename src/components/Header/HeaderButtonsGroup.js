@@ -3,17 +3,23 @@ import { IconWithTitle } from '../IconWithTItle/IconWithTitle';
 import { SvgIcon } from '../Svg/SvgIcon';
 import { Link } from 'react-router-dom';
 
-export const HeaderButtonsGroup = ({ buttonsSet }) => {
+export const HeaderButtonsGroup = ({ buttonsSet, showBuildModal }) => {
   return (
     <div className='page-header__buttons-group'>
       {buttonsSet.map(buttonType => {
         let iconId = buttonType;
         let iconTitle = buttonType[0].toUpperCase() + buttonType.substring(1);
         let titleClass = 'hidden_mobile';
+        let onClick;
 
         if (buttonType === 'build') {
           iconId = 'play';
           iconTitle = 'Run Build';
+          onClick = showBuildModal;
+        }
+
+        if (buttonType === 'rebuild') {
+          onClick = () => alert('rebuild');
         }
 
         if (buttonType === 'settings' && buttonsSet.length > 1) {
@@ -35,6 +41,7 @@ export const HeaderButtonsGroup = ({ buttonsSet }) => {
             content={buttonContent}
             modifiers={['secondary', 'small']}
             ariaLabel={iconTitle}
+            clickHandler={onClick}
           />
       })}
     </div>

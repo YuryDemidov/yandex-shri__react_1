@@ -1,7 +1,7 @@
-export const PageContent = ({ renderPageContent, hasContainer }) => {
+export const PageContent = ({ renderPageContent }) => {
   return (
     <main className='page__content page-content'>
-      <div className={hasContainer && 'container'}>
+      <div className='container'>
         {renderPageContent()}
       </div>
     </main>

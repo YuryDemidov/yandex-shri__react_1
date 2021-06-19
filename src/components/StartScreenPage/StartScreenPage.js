@@ -14,7 +14,6 @@ export const StartScreenPage = () => {
       />
       <PageContent
         renderPageContent={() => <StartScreenContent/>}
-        hasContainer
       />
     </>
   )

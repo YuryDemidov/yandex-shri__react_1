@@ -59,6 +59,8 @@
   --gray-text-color: #7f8285;
   --gray-bg-color: #f0f2f3;
   --link-hover-color: #e00000;
+  --shadow-color: rgba(67, 68, 69, 0.3);
+  --modal-bg-color: rgba(0, 0, 0, 0.4);
   --xx-dark-dim-color: #111111;
   --x-dark-dim-color: #434445;
   --dark-dim-color: #7f7f7f;
@@ -67,6 +69,7 @@
   --x-light-dim-color: #d9d9d9;
   --xx-light-dim-color: #f2f2f2;
 
+  --font-size-xxs: 1rem;
   --font-size-xs: 1.1rem;
   --font-size-s: 1.3rem;
   --font-size-m: 1.5rem;
@@ -146,6 +149,10 @@ code {
   flex-direction: column;
 }
 
+.page_no-scroll {
+  overflow: hidden;
+}
+
 .page__content {
   flex-grow: 1;
 }
@@ -176,10 +183,16 @@ code {
 
 .message_success {
   color: var(--success-color);
+
+  animation-name: fade-in;
+  animation-duration: 0.4s;
 }
 
 .message_error {
   color: var(--error-color);
+
+  animation-name: head-shake;
+  animation-duration: 1.2s;
 }
 
 @media (min-width: 1024px) {

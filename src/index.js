@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import './css/libs/normalize.css';
 import './css/common.css';
+import './css/animations/animations.css';
 
 import App from './components/App';
 

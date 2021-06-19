@@ -6,6 +6,7 @@
   padding: 1.2rem 0;
 
   line-height: 1.4;
+  letter-spacing: 0.006rem;
 }
 
 .page-footer__links {
@@ -18,5 +19,17 @@
 }
 
 .page-footer__copyright {
-  color: var(--link-color);
+  color: var(--gray-text-color);
+}
+
+@media (min-width: 576px) {
+  .page-footer__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7rem 0;
+  }
+
+  .page-footer__links {
+    margin-bottom: 0;
+  }
 }

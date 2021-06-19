@@ -1,3 +1,21 @@
+# Домашнее задание ШРИ по теме "React"
+
+Установка необходимых модулей:
+```
+npm i
+```
+
+Запуск локального сервера на порту 3000:
+```
+npm start
+```
+
+Для переключения между стартовым экраном и списком сборок, находящихся на одном роуте ('/'), нужно в `src/components/App.js` закомментировать / раскомментировать все значения в переменной `mockData`, в которой хранится конфигурация CI системы.
+
+---
+---
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

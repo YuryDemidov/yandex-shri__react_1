@@ -1,6 +1,6 @@
-import '../css/components/page-footer.css'
+import '../../css/components/page-footer.css'
 
-export const AppFooter = () => {
+export const PageFooter = () => {
   return (
     <footer className='page__footer page-footer'>
       <div className='container'>
